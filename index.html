@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>May Graph 图编辑器 - 冒昧出品</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="konva.js"></script>
+</head>
+
+<body>
+    <div id="main_area"></div>
+    <div id="side_bar">
+        <div id="node_tag_set_container">
+            <div>
+                <span>状态节点标签</span>
+                <button id="create_node_tag_button">添加</button>
+                <!-- <input type="color" id="node_color_input" value="#33cc33"> -->
+                <!-- <button id="select_node_tag_button">全选</button>
+                <button id="inverse_node_tag_button">反选</button> -->
+            </div>
+        </div>
+        <div id="edge_tag_set_container">
+            <div>
+                <span>信号标签</span>
+                <button id="create_edge_tag_button">添加</button>
+            </div>
+        </div>
+        <div id="tool_set_container">
+            <button id="tool_save_project">保存工程</button>
+            <button id="tool_load_project">加载工程</button>
+            <div id="tool_tip">
+                动作状态机编辑器<br>
+                冒昧科技出品<br>
+                email: 2158272812@qq.com<br>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
