@@ -9,13 +9,9 @@ stateDiagram-v2
     GuiComponents --> DomAPI
 ```
 
-# 覆盖流程
+# Intro
 
-1. 创建
-2. 删除
-3. 重命名
-4. 创建
-
+it's a state machine editor, which can transfer the graph you create to a json file.
 
 # Konva
 
