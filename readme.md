@@ -11,7 +11,8 @@ stateDiagram-v2
 
 # Intro
 
-it's a state machine editor, which can transfer the graph you create to a json file.
+it's a state machine editor, which can save the graph as a json file.
+
 
 # Konva
 
