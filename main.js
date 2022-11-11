@@ -586,7 +586,7 @@ InitToolSet: {
             for (const edge of project.edge_list) {
                 const edge_shape = Scene.addEdge(Node.getByName(edge.source), edge.edge_tag)
                 edge_shape.target_arrow.stopDrag()
-                // 创建路径点
+                // 同步箭头和路径点
                 edge_shape.target_arrow.position(edge.pathpoint_list[edge.pathpoint_list.length - 1])
                 for (let i = edge.pathpoint_list.length - 2; i >= 0; i--) {
                     const position = edge.pathpoint_list[i];
@@ -595,6 +595,8 @@ InitToolSet: {
                     point_shape.position(position)
                 }
                 edge_shape.attach_index = edge.attach_index
+                edge_shape.edge_tag.startDrag()
+                edge_shape.edge_tag.stopDrag()
                 Edge.refresh(edge_shape)
                 Edge.setTarget(edge_shape, Node.getByName(edge.target))
             }
@@ -941,7 +943,7 @@ const Edge = {
         group.edge_tag.on("dragend", (e) => {
             group.add(group.edge_tag)
             if (group.edge_tag.hovering != null && group.edge_tag.hovering.edge_shape == group) {
-                Edge.attachTag(group, edge_tag, group.edge_tag.hovering)
+                Edge.attachTag(group, group.edge_tag.text.text(), group.edge_tag.hovering)
             } else {
                 Edge.refresh(group)
             }
