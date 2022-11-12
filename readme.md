@@ -13,6 +13,10 @@ stateDiagram-v2
 
 it's a state machine editor, which can save the graph as a json file.
 
+# How to use
+
+just open index.html by your browser.
+
 
 # Konva
 
