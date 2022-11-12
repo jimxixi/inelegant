@@ -17,6 +17,8 @@ it's a state machine editor, which can save the graph as a json file.
 
 just open index.html by your browser.
 
+the user manual is built in. 
+
 
 # Konva
 
